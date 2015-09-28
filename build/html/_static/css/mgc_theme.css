@@ -1,0 +1,82 @@
+@import url("theme.css");
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+.wy-side-nav-search, .wy-menu-vertical, .wy-nav-side{
+	opacity: 0;
+	display: none;
+	visibility: hidden;
+	background: #F5F5F5;
+}
+.wy-body-for-nav {
+	background: #F5F5F5;
+}
+.wy-nav-content-wrap {
+	background: #F5F5F5;
+	margin: 0;
+}
+.wy-nav-content {
+	background: white;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Ubuntu', sans-serif;
+}
+h3 {
+	font-size: 140%;
+}
+h3 {
+	font-size: 110%;
+}
+.mgc-navigation {
+	background: white;
+	width: 20%;
+	float: left;
+}
+.document {
+	float: right;
+	width: 75%;
+	margin-left: 5%;
+}
+a {
+	color: #2980b9;
+}
+a:visited{
+	color: #2980b9;
+}
+.mgc-nav-head {
+	color: #2980b9;
+	font-weight: 700;
+}
+.mgc-toctree {
+	font-size: 13px;
+	padding-top: 10px;
+	line-height: 20px;
+}
+li a.current {
+	font-weight: 700;
+}
+.toctree-l2 {
+	padding-left: 5px;
+}
+.toctree-l3 {
+	padding-left: 10px;
+}
+.mgc-footer {
+	color: black;
+	font-size: 13px;
+}
+.mgc-search {
+	border-radius: 3px !important;
+	border: none !important;
+	background-color: #E8E8E8 !important;
+	color: black !important;
+	margin-bottom: 10px !important;
+}
+p {
+	margin-bottom: 15px;
+}

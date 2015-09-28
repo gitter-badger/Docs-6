@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'MinigameCore'
-copyright = u'2015, MinigameCoreTeam'
+copyright = u'2015, MinigameCore Contributors'
 author = u'MinigameCoreTeam'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -112,6 +112,8 @@ import sphinx_rtd_theme
 #html_theme = 'minigamecore_theme'
 html_theme = "sphinx_rtd_theme"
 
+html_style = 'css/mgc_theme.css' 
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -119,7 +121,7 @@ html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = ["."]
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(),"."]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -149,7 +151,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -175,10 +177,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+#html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+#html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

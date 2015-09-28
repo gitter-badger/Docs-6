@@ -1,0 +1,17 @@
+<footer>
+  {% if next or prev %}
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+    </div>
+  {% endif %}
+
+  <hr/>
+
+  {%- if show_sphinx %}
+  <div class="mgc-footer">{% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+	Created with <a href="http://sphinx-doc.org/">Sphinx</a> (<a href="https://github.com/snide/sphinx_rtd_theme">Modified RTD</a>). 
+  </div>
+  {%- endif %}
+
+  {%- block extrafooter %} {% endblock %}
+
+</footer>
