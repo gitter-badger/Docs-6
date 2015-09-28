@@ -1,22 +1,42 @@
-.. MinigameCore documentation master file, created by
-   sphinx-quickstart on Sun Sep 27 10:45:58 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+==========================
+MinigameCore Documentation
+==========================
 
-Welcome to MinigameCore's documentation!
-========================================
+Introduction
+============
+
+Welcome to MinigameCoreDocs, the official documentation for `MinigameCore <https://github.com/Flibio/MinigameCore>`_.
+
+.. warning::
+
+	MinigameCore is still in development, so some functions are not complete or not implemented. Also note that 
+	portions of MinigameCore aren't tested yet, so expect some bugs to arise. If you find a bug, please immediately 
+	report it to the `GitHub issue tracker <https://github.com/Flibio/MinigameCore>`_.
 
 Contents:
+=========
+
+Creating a Minigame
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This section is for developers who wish to use MinigameCore in their plugins.
 
 .. toctree::
    :maxdepth: 2
+   :titlesonly:
+   
+   minigame/index
 
+Contributing to MinigameCore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This section is intended for:
 
-Indices and tables
-==================
+ * Developers who wish to help develop MinigameCore
+ * Users who want to help write/style the MinigameCore Docs
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+   
+   contributing/index
