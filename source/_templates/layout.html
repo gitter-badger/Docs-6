@@ -127,13 +127,13 @@
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
 		  <div class="mgc-navigation" data-spy="affix" role="navigation" aria-label="main navigation">
-		  <!--<div role="search">
-			  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		  <div role="search">
+			  <form id="rtd-search-form" class="wy-form" action="/search.html" method="get">
 				<input type="text" name="q" placeholder="Search docs" class="mgc-search" />
 				<input type="hidden" name="check_keywords" value="yes" />
 				<input type="hidden" name="area" value="default" />
 			  </form>
-			</div>-->
+			</div>
 		  <b class="mgc-nav-head"><a href="{{ pathto(master_doc) }}">Table Of Contents</a></b>
           {% block menu %}
             {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}

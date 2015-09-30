@@ -22,7 +22,7 @@ Creating a Minigame
 This section is for developers who wish to use MinigameCore in their plugins.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 10
    :titlesonly:
    
    minigame/index
@@ -36,7 +36,20 @@ This section is intended for:
  * Users who want to help write/style the MinigameCore Docs
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 10
    :titlesonly:
    
    contributing/index
+   
+About MinigameCore
+~~~~~~~~~~~~~~~~~~
+
+This section is intended for:
+
+ * Anyone who wants to learn more about MinigameCore
+
+.. toctree::
+   :maxdepth: 10
+   :titlesonly:
+   
+   about/index

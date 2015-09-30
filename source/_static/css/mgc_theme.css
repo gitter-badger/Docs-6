@@ -69,6 +69,7 @@ li a.current {
 .mgc-footer {
 	color: black;
 	font-size: 13px;
+	clear: both;
 }
 .mgc-search {
 	border-radius: 3px !important;
