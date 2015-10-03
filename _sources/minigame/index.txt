@@ -19,7 +19,9 @@ Contents
 ========
 
 .. toctree::
-	:maxdepth: 10
+	:maxdepth: 100
 	:titlesonly:
 	
 	settingup
+	basic
+	arenacustomization/index
