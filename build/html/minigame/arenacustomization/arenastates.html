@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Arena States &mdash; MinigameCore 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/mgc_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MinigameCore 1.0.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Arena Customization" href="index.html"/>
+        <link rel="next" title="Contributing to MinigameCore" href="../../contributing/index.html"/>
+        <link rel="prev" title="Arena Customization" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MinigameCore
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">MinigameCoreDocs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Creating a Minigame</a> &raquo;</li>
+      
+          <li><a href="index.html">Arena Customization</a> &raquo;</li>
+      
+    <li>Arena States</li>
+      <li class="wy-breadcrumbs-aside">
+        
+		  
+			<a href="index.html" title="Arena Customization" >previous</a>
+			 | 
+		  
+		  
+			<a href="../../contributing/index.html" title="Contributing to MinigameCore" >next</a>
+			 | 
+		   
+		
+		<a href="../../index.html">home</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+		  <div class="mgc-navigation" data-spy="affix" role="navigation" aria-label="main navigation">
+		  <div role="search">
+			  <form id="rtd-search-form" class="wy-form" action="/Docs/search.html" method="get">
+				<input type="text" name="q" placeholder="Search docs" class="mgc-search" />
+				<input type="hidden" name="check_keywords" value="yes" />
+				<input type="hidden" name="area" value="default" />
+			  </form>
+			</div>
+		  <b class="mgc-nav-head"><a href="../../index.html">Table Of Contents</a></b>
+          
+            
+            
+                 <div class="mgc-toctree"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creating a Minigame</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../settingup.html">Setting Up your IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../basic.html">Basic Minigame Creation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Arena Customization</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Arena States</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to MinigameCore</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About MinigameCore</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arena-states">
+<h1>Arena States<a class="headerlink" href="#arena-states" title="Permalink to this headline">¶</a></h1>
+<p>This page describes the <code class="docutils literal"><span class="pre">ArenaState</span></code> in detail and how to customize it.</p>
+<div class="section" id="what-is-an-arenastate">
+<h2>What is an ArenaState?<a class="headerlink" href="#what-is-an-arenastate" title="Permalink to this headline">¶</a></h2>
+<p>An <code class="docutils literal"><span class="pre">ArenaState</span></code> is used to tell what the arena is currently doing. There are currently 6 default <code class="docutils literal"><span class="pre">ArenaStates</span></code>:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>LOBBY_WAITING</strong></dt>
+<dd>The arena is in the lobby, and waiting for the minimum players to join.</dd>
+<dt><strong>LOBBY_COUNTDOWN</strong></dt>
+<dd>The arena is in the lobby, and the minimum players have been reached. The arena is now counting down for a set amount of time.</dd>
+<dt><strong>COUNTDOWN_CANCELLED</strong></dt>
+<dd>The arena is in the lobby, and had dipped below the minimum players. This is only activated for a few milliseconds, and will change directly back to <code class="docutils literal"><span class="pre">LOBBY_WAITING</span></code>.</dd>
+<dt><strong>GAME_COUNTDOWN</strong></dt>
+<dd>The game is in countdown phase.</dd>
+<dt><strong>GAME_PLAYING</strong></dt>
+<dd>The game is in progress.</dd>
+<dt><strong>GAME_OVER</strong></dt>
+<dd>The game has ended and will wait 5 seconds before teleporting players back to the lobby spawn location.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The behavior described is the default behavior of MinigameCore. It can be customized or disabled at the developers will.</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="adding-a-custom-arenastate">
+<h2>Adding a Custom ArenaState<a class="headerlink" href="#adding-a-custom-arenastate" title="Permalink to this headline">¶</a></h2>
+<p>To add a custom <code class="docutils literal"><span class="pre">ArenaState</span></code>, you will need to use the <code class="docutils literal"><span class="pre">ArenaStateBuilder</span></code>. You need to register it with the
+<code class="docutils literal"><span class="pre">Arena</span></code> in order for the <code class="docutils literal"><span class="pre">Arena</span></code> to recognize it. An example of how to do this can be found below:</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">me.flibio.minigamecore.arena.Arena</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">me.flibio.minigamecore.arena.ArenaState</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">me.flibio.minigamecore.arena.ArenaStateBuilder</span><span class="o">;</span>
+
+<span class="n">ArenaState</span> <span class="n">arenaState</span> <span class="o">=</span> <span class="n">ArenaStateBuilder</span><span class="o">.</span><span class="na">createBasicArenaState</span><span class="o">(</span><span class="s">&quot;Custom ArenaState&quot;</span><span class="o">);</span>
+<span class="n">arena</span><span class="o">.</span><span class="na">addArenaState</span><span class="o">(</span><span class="n">arenaState</span><span class="o">);</span> <span class="c1">// &lt;--- This method will return a boolean based on if it was successful or not</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible to create an <code class="docutils literal"><span class="pre">ArenaState</span></code> by extending the <code class="docutils literal"><span class="pre">ArenaState</span></code> class, but this should only attempted by advanced users. There is little to
+no benefit of creating an <code class="docutils literal"><span class="pre">ArenaState</span></code> without using the <code class="docutils literal"><span class="pre">ArenaStateBuilder</span></code>.</p>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+    </div>
+  
+
+  <hr/>
+  <div class="mgc-footer">&copy; Copyright 2015, MinigameCore Contributors.
+	Created with <a href="http://sphinx-doc.org/">Sphinx</a> (<a href="https://github.com/snide/sphinx_rtd_theme">Modified RTD</a>). 
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+</body>
+</html>

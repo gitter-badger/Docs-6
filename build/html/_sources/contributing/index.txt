@@ -27,7 +27,7 @@ Contents
 ========
 
 .. toctree::
-	:maxdepth: 10
+	:maxdepth: 100
 	:titlesonly:
 	
 	minigamecoredocs
